@@ -39,16 +39,16 @@ def main():
         cv2.imshow('img_thresh', image)
         cv2.waitKey(5000)
         yanzhengma = raw_input()
-        voteString = ''
-        for _ in range(10):
-            voteString = voteString + '3,'
+        # voteString = ''
+        # for _ in range(10):
+        voteString = '1,1,1,3,3,3,9,9,9,'
         serverUrl = "http://jcxmt2017.jcrb.com/voteAPI/xmtwb/pcVoteAdd" + "?captcha=" + yanzhengma + "&voteString=" + voteString + "&jsoncallback=?"
         jieguo = 'http://jcxmt2017.jcrb.com/voteAPI' + "/result" + "?keyString=" + 'xmtwb' + "&jsoncallback=?"
         index = 1
         while 1:
             print index
             r = s.get(serverUrl)
-        # r2 = s.get(serverUrl)
+            # r2 = s.get(serverUrl)
             print r.text
             index+=1
         print 'over'
