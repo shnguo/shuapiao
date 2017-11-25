@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Poem Maker Pro</title>
+</head>
+
+<body>
+    <img id="randimg" src="{{ static_url("temp.jpg") }}" title="如果看不清楚，请点击图片，换一张图片" />
+    <form method="post" action="/poem">
+        <p>验证码：
+            <br>
+            <input type="text" name="noun1">
+        </p>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
